@@ -12,7 +12,7 @@ public class Conexion
     Connection conexion = null;
     String user = "root";
     //Base de datos 
-    String password="e384fx";
+    String password="Yamaha18";
     String database="agencia_autos";
 
     String ip = "localhost";
