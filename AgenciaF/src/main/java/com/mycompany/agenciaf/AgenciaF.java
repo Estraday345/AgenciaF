@@ -1,11 +1,12 @@
 package com.mycompany.agenciaf;
 
-import Interfaz.InicioSesion;
+import Interfaz.Inicio;
+
 
 public class AgenciaF {
      public static void main(String[] args) 
     {
-        InicioSesion Is=new InicioSesion();
-        Is.setVisible(true);
+        Inicio I=new Inicio();
+        I.setVisible(true);
     }
 }
