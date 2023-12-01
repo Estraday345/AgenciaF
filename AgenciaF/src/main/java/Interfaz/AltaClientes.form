@@ -188,11 +188,6 @@
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="imgIdCliente">
-                          <Properties>
-                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\Users\usuario\Documents\GitHub\ProyectoIceAndWine\src\main\java\Imagenes\tarjeta-de-visita.png"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel4">
                           <Properties>
@@ -336,11 +331,6 @@
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel7">
-                          <Properties>
-                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\Users\usuario\Documents\GitHub\ProyectoIceAndWine\src\main\java\Imagenes\usuario (1).png"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel8">
                           <Properties>
@@ -451,11 +441,6 @@
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel5">
-                          <Properties>
-                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\Users\usuario\Documents\GitHub\ProyectoIceAndWine\src\main\java\Imagenes\ubicacion.png"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel6">
                           <Properties>
@@ -569,11 +554,6 @@
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel9">
-                          <Properties>
-                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="2" name="C:\Users\usuario\Documents\GitHub\ProyectoIceAndWine\src\main\java\Imagenes\viber.png"/>
-                            </Property>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel10">
                           <Properties>

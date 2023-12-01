@@ -4,6 +4,9 @@
  */
 package Interfaz;
 
+import Sistema.Bajas;
+import javax.swing.table.DefaultTableModel;
+
 
 
 /**
@@ -12,11 +15,20 @@ package Interfaz;
  */
 public class BajaClientes extends javax.swing.JFrame {
 
-    /**
-     * Creates new form BajaClientes
-     */
+    DefaultTableModel tableModel2 = new DefaultTableModel();
+    Bajas obBaja = new Bajas();
+    
     public BajaClientes() {
         initComponents();
+         this.setLocationRelativeTo(null);
+        //imgIdCliente.setIcon(new ImageIcon("./src/main/java/Imagenes/tarjeta-de-visita.png"));
+        tableModel2.addColumn("Id Cliente");
+        tableModel2.addColumn("Nombre(s)");
+        tableModel2.addColumn("Direccion");
+        tableModel2.addColumn("Telefono");
+        jTable2.setModel(tableModel2);
+        
+        obBaja.mostrar(tableModel2);
     }
 
     /**
@@ -50,28 +62,22 @@ public class BajaClientes extends javax.swing.JFrame {
         jPanel29 = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
         jPanel35 = new javax.swing.JPanel();
         jPanel32 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
         jPanel37 = new javax.swing.JPanel();
         jPanel36 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jPanel39 = new javax.swing.JPanel();
-        jTextField4 = new javax.swing.JTextField();
         jPanel38 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
@@ -94,8 +100,6 @@ public class BajaClientes extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\GitHub\\ProyectoIceAndWine\\src\\main\\java\\Imagenes\\borrar.png")); // NOI18N
         jPanel2.add(jLabel1);
 
         jLabel2.setFont(new java.awt.Font("Agency FB", 1, 55)); // NOI18N
@@ -143,8 +147,6 @@ public class BajaClientes extends javax.swing.JFrame {
         jPanel15.add(jPanel25);
 
         jPanel24.setBackground(new java.awt.Color(0, 0, 0));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\GitHub\\ProyectoIceAndWine\\src\\main\\java\\Imagenes\\tarjeta-de-visita.png")); // NOI18N
         jPanel24.add(jLabel3);
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -222,14 +224,7 @@ public class BajaClientes extends javax.swing.JFrame {
         jPanel17.add(jPanel29);
 
         jPanel28.setBackground(new java.awt.Color(0, 0, 0));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\GitHub\\ProyectoIceAndWine\\src\\main\\java\\Imagenes\\usuario (1).png")); // NOI18N
         jPanel28.add(jLabel7);
-
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Nombre(s)");
-        jPanel28.add(jLabel8);
 
         jPanel17.add(jPanel28);
 
@@ -237,12 +232,6 @@ public class BajaClientes extends javax.swing.JFrame {
 
         jPanel16.setBackground(new java.awt.Color(0, 0, 0));
         jPanel16.setLayout(new java.awt.GridLayout(1, 2, 10, 0));
-
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel16.add(jTextField2);
-
         jPanel7.add(jPanel16);
 
         jPanel3.add(jPanel7);
@@ -282,14 +271,7 @@ public class BajaClientes extends javax.swing.JFrame {
         jPanel19.add(jPanel35);
 
         jPanel32.setBackground(new java.awt.Color(0, 0, 0));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\GitHub\\ProyectoIceAndWine\\src\\main\\java\\Imagenes\\ubicacion.png")); // NOI18N
         jPanel32.add(jLabel5);
-
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Direccion");
-        jPanel32.add(jLabel6);
 
         jPanel19.add(jPanel32);
 
@@ -297,12 +279,6 @@ public class BajaClientes extends javax.swing.JFrame {
 
         jPanel18.setBackground(new java.awt.Color(0, 0, 0));
         jPanel18.setLayout(new java.awt.BorderLayout(10, 0));
-
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel18.add(jTextField1, java.awt.BorderLayout.CENTER);
-
         jPanel9.add(jPanel18);
 
         jPanel3.add(jPanel9);
@@ -342,14 +318,7 @@ public class BajaClientes extends javax.swing.JFrame {
         jPanel21.add(jPanel37);
 
         jPanel36.setBackground(new java.awt.Color(0, 0, 0));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\GitHub\\ProyectoIceAndWine\\src\\main\\java\\Imagenes\\viber.png")); // NOI18N
         jPanel36.add(jLabel9);
-
-        jLabel10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Teléfono");
-        jPanel36.add(jLabel10);
 
         jPanel21.add(jPanel36);
 
@@ -359,11 +328,6 @@ public class BajaClientes extends javax.swing.JFrame {
 
         jPanel39.setBackground(new java.awt.Color(0, 0, 0));
         jPanel39.setLayout(new java.awt.BorderLayout());
-
-        jTextField4.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField4.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jPanel39.add(jTextField4, java.awt.BorderLayout.CENTER);
-
         jPanel20.add(jPanel39);
 
         jPanel38.setBackground(new java.awt.Color(0, 0, 0));
@@ -424,7 +388,6 @@ public class BajaClientes extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(204, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\GitHub\\ProyectoIceAndWine\\src\\main\\java\\Imagenes\\analitica-de-datos.png")); // NOI18N
         jButton1.setText("Eliminar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -459,7 +422,6 @@ public class BajaClientes extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(204, 0, 0));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\GitHub\\ProyectoIceAndWine\\src\\main\\java\\Imagenes\\volver.png")); // NOI18N
         jButton3.setText("Regresar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -547,7 +509,7 @@ public class BajaClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -556,7 +518,8 @@ public class BajaClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        obBaja.darBaja(jTextField3);
+        obBaja.mostrar(tableModel2);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -600,14 +563,11 @@ public class BajaClientes extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -651,9 +611,6 @@ public class BajaClientes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

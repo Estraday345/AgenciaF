@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 public class AltaClientes extends javax.swing.JFrame {
 
     DefaultTableModel tableModel = new DefaultTableModel();
-
+    Altas obAlta = new Altas();
     public AltaClientes() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -25,6 +25,8 @@ public class AltaClientes extends javax.swing.JFrame {
         tableModel.addColumn("Direccion");
         tableModel.addColumn("Telefono");
         tablaClientes.setModel(tableModel);
+        
+         obAlta.mostrarS(tableModel);
 
     }
 
