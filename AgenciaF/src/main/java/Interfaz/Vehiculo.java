@@ -1,22 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Interfaz;
 
+import Sistema.Altas;
+import javax.swing.table.DefaultTableModel;
 
 
-/**
- *
- * @author usuario
- */
+ 
 public class Vehiculo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Vehiculo
-     */
+  DefaultTableModel tableModel = new DefaultTableModel();
+    Altas obAlta = new Altas();
     public Vehiculo() {
+         this.setLocationRelativeTo(null);
         initComponents();
+        tableModel.addColumn("No_Serie");
+        tableModel.addColumn("Marca");
+        tableModel.addColumn("Modelo");
+        tableModel.addColumn("Stock");
+        tablaVehiculo.setModel(tableModel);
+        obAlta.mostarVehiculo(tableModel);
+        
     }
 
     /**
@@ -43,7 +46,7 @@ public class Vehiculo extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jPanel27 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
+        txtSerie = new javax.swing.JTextField();
         jPanel26 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -53,7 +56,7 @@ public class Vehiculo extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
+        txtMarca = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
@@ -62,7 +65,7 @@ public class Vehiculo extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txtModelo = new javax.swing.JTextField();
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
@@ -72,7 +75,7 @@ public class Vehiculo extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jPanel39 = new javax.swing.JPanel();
-        jTextField4 = new javax.swing.JTextField();
+        txtStock = new javax.swing.JTextField();
         jPanel38 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
@@ -88,7 +91,7 @@ public class Vehiculo extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jPanel31 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablaVehiculo = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -166,10 +169,15 @@ public class Vehiculo extends javax.swing.JFrame {
         jPanel27.setBackground(new java.awt.Color(0, 0, 0));
         jPanel27.setLayout(new java.awt.BorderLayout());
 
-        jTextField3.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel27.add(jTextField3, java.awt.BorderLayout.CENTER);
+        txtSerie.setBackground(new java.awt.Color(0, 0, 0));
+        txtSerie.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        txtSerie.setForeground(new java.awt.Color(255, 255, 255));
+        txtSerie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSerieActionPerformed(evt);
+            }
+        });
+        jPanel27.add(txtSerie, java.awt.BorderLayout.CENTER);
 
         jPanel14.add(jPanel27);
 
@@ -243,10 +251,10 @@ public class Vehiculo extends javax.swing.JFrame {
         jPanel16.setBackground(new java.awt.Color(0, 0, 0));
         jPanel16.setLayout(new java.awt.GridLayout(1, 2, 10, 0));
 
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel16.add(jTextField2);
+        txtMarca.setBackground(new java.awt.Color(0, 0, 0));
+        txtMarca.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        txtMarca.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel16.add(txtMarca);
 
         jPanel8.add(jPanel16);
 
@@ -303,10 +311,10 @@ public class Vehiculo extends javax.swing.JFrame {
         jPanel18.setBackground(new java.awt.Color(0, 0, 0));
         jPanel18.setLayout(new java.awt.BorderLayout(10, 0));
 
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel18.add(jTextField1, java.awt.BorderLayout.CENTER);
+        txtModelo.setBackground(new java.awt.Color(0, 0, 0));
+        txtModelo.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        txtModelo.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel18.add(txtModelo, java.awt.BorderLayout.CENTER);
 
         jPanel10.add(jPanel18);
 
@@ -365,9 +373,9 @@ public class Vehiculo extends javax.swing.JFrame {
         jPanel39.setBackground(new java.awt.Color(0, 0, 0));
         jPanel39.setLayout(new java.awt.BorderLayout());
 
-        jTextField4.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField4.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jPanel39.add(jTextField4, java.awt.BorderLayout.CENTER);
+        txtStock.setBackground(new java.awt.Color(0, 0, 0));
+        txtStock.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jPanel39.add(txtStock, java.awt.BorderLayout.CENTER);
 
         jPanel20.add(jPanel39);
 
@@ -416,6 +424,11 @@ public class Vehiculo extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\GitHub\\ProyectoIceAndWine\\src\\main\\java\\Imagenes\\agregar-usuario.png")); // NOI18N
         jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel43.add(jButton1, java.awt.BorderLayout.PAGE_START);
 
         jPanel23.add(jPanel43);
@@ -477,9 +490,9 @@ public class Vehiculo extends javax.swing.JFrame {
 
         jScrollPane2.setBackground(new java.awt.Color(204, 0, 0));
 
-        jTable2.setBackground(new java.awt.Color(255, 255, 255));
-        jTable2.setForeground(new java.awt.Color(0, 0, 0));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablaVehiculo.setBackground(new java.awt.Color(255, 255, 255));
+        tablaVehiculo.setForeground(new java.awt.Color(0, 0, 0));
+        tablaVehiculo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -501,7 +514,7 @@ public class Vehiculo extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tablaVehiculo);
 
         jPanel31.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
@@ -555,6 +568,15 @@ public class Vehiculo extends javax.swing.JFrame {
         
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       obAlta.altaVehiculo(txtSerie, txtMarca, txtModelo, txtStock);
+        obAlta.mostarVehiculo(tableModel);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtSerieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSerieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSerieActionPerformed
 
     /**
      * @param args the command line arguments
@@ -651,10 +673,10 @@ public class Vehiculo extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTable tablaVehiculo;
+    private javax.swing.JTextField txtMarca;
+    private javax.swing.JTextField txtModelo;
+    private javax.swing.JTextField txtSerie;
+    private javax.swing.JTextField txtStock;
     // End of variables declaration//GEN-END:variables
 }

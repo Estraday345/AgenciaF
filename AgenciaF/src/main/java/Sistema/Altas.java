@@ -38,4 +38,12 @@ public class Altas {
        
     }
 
+    public void altaVehiculo(JTextField txtSerie, JTextField txtMarca, JTextField txtModelo, JTextField txtStock) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void mostarVehiculo(DefaultTableModel tableModel) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
